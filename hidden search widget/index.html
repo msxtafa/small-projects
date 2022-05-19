@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>hidden searchbar</title>
+</head>
+
+<style>
+    body{
+    background-color: blanchedalmond;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .search{
+    display: flex;
+    
+    }
+
+    button{
+    background-color: white;
+    border: none;
+    padding: 1em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
+
+    input{
+    border: none;
+    width: 0px;
+    transition:  width 1s linear;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+
+    input.active{
+    width:150px;
+    }
+
+    input:focus{
+    outline: none;
+    }
+
+  
+
+</style>
+<body>
+
+    <div class="search">
+        <input type="text" class="input" placeholder="Search..">
+        <button class="btn"><img src="/search.png" alt=""></button>
+    </div>
+    
+
+
+<script>
+
+let btn = document.querySelector(".btn");
+let input = document.querySelector(".input");
+
+btn.addEventListener("click", () => {
+input.classList.toggle("active");
+if(input.classList.contains("active")){input.focus();} return
+
+})
+console.log(input.classList)
+
+</script>
+</body>
+</html>
