@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<style>
+
+    *,*::after,*::before{
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+    background-color: rgb(23, 19, 74);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    }
+
+    
+
+    form{
+    background-color: rgb(141, 188, 229);
+    border-radius: 15px;
+    padding: 4em;
+   }
+
+   label{ 
+    padding: 0.5em 0;
+   }
+
+    .form-group{
+    display: grid;
+    padding: 0.5em;
+    }
+
+    .submit-button{
+    margin-top: 20px;
+    text-align: center;
+    }
+
+    button{
+    width: 50%;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em;
+    border-radius: 100vmax;
+    }
+
+    input{
+    min-width: 200px;
+    border: none;
+    padding: 0.5em 0;
+    }
+
+    input:focus{
+    outline-color: rgb(23, 19, 74);
+    border: none;
+    }
+
+    
+    
+
+</style>
+<body>
+    
+
+    <form>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" required  pattern="[\w\.-]+@[\w.-]+\.[a-z]{2,}">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+             <input id="password" title="Must be at least 8 characters"  pattern="[\w\.-]{8,}" required type="password" > <!-- regEx [\w] == [a-zA-Z0-9_] -->
+        </div>
+        <div class="submit-button">
+            <button>Submit</button>
+        </div>
+    </form>
+
+    
+
+    
+</body>
+</html>
